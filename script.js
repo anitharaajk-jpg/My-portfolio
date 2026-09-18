@@ -1,22 +1,16 @@
-// Simple welcome message in the browser console
-console.log("Welcome to Kaviya's Portfolio!");
+document.addEventListener("DOMContentLoaded", function () {
 
+    console.log("Kaviya's Portfolio Loaded Successfully!");
 
-// Smooth scrolling for navigation links
+    const links = document.querySelectorAll(".nav-links a");
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+    links.forEach(function (link) {
 
-    link.addEventListener("click", function(event) {
+        link.addEventListener("click", function () {
 
-        const target = document.querySelector(this.getAttribute("href"));
+            console.log("Navigation clicked:", link.textContent);
 
-        if (target) {
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
+        });
 
     });
 
